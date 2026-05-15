@@ -57,7 +57,7 @@ function App() {
         address: CONTRACT_ADDRESS as `0x${string}`,
         abi: CELO_SPACE_MINER_ABI,
         functionName: 'getTopMiners',
-        args: [BigInt(10)],
+        args: [BigInt(50)],
       }) as [string[], bigint[]];
 
       setLeaderboard(addrs.map((addr, i) => ({
@@ -343,15 +343,20 @@ function App() {
         {/* Right Sidebar: Leaderboard & Shop */}
         <aside className="sidebar right">
           <div className="sidebar-content glass-panel">
-            {/* 🚀 PROJECT GROWTH HUD */}
-            <div className="card glass-card stat-card glow-blue animate-pulse" style={{marginBottom: '20px', background: 'rgba(0, 242, 255, 0.08)', border: '1px solid var(--accent)'}}>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 rounded-lg bg-blue-500/20 text-blue-400">
-                  <Users size={20} />
+            {/* 🚀 PROJECT GROWTH HUD - NOW GOLD FOR 50+ PLAYERS */}
+            <div className="card glass-card stat-card glow-gold animate-pulse" style={{
+              marginBottom: '20px', 
+              background: 'rgba(255, 215, 0, 0.1)', 
+              border: '2px solid #ffd700',
+              padding: '20px'
+            }}>
+              <div className="flex items-center gap-4">
+                <div className="p-3 rounded-xl bg-yellow-500/20 text-yellow-400">
+                  <Sparkles size={28} />
                 </div>
                 <div>
-                  <h3 className="text-sm font-medium text-gray-400">Network Strength</h3>
-                  <p className="text-2xl font-bold text-white">{totalPlayers} <small style={{fontSize: '0.8rem', color: 'var(--accent)'}}>Miners</small></p>
+                  <h3 className="text-xs font-bold text-yellow-500 uppercase tracking-widest">Global Network</h3>
+                  <p className="text-3xl font-black text-white">{totalPlayers} <span style={{fontSize: '1rem', color: '#ffd700'}}>MINERS</span></p>
                 </div>
               </div>
             </div>
