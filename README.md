@@ -4,6 +4,9 @@
 
 **Celo Space Miner** is a high-interaction, gamified MiniPay DApp built to showcase the power of the Celo blockchain. Designed for the **Talent Protocol Celo MiniPay Challenge**, it focuses on deep on-chain engagement through daily rewards, a robust referral system, and complex smart contract interactions.
 
+> [!NOTE]  
+> Last updated: May 16, 2026 - Production Build v1.1.2
+
 ---
 
 ## 🌟 Key Features
@@ -24,6 +27,22 @@
 - **Web3 Integration**: Viem + Wagmi
 - **Styling**: Premium Glassmorphism UI (CSS3)
 - **Stablecoin Integration**: USDm (Celo native)
+
+## 🏗️ Technical Architecture
+
+```mermaid
+graph TD
+    User[Space Miner Player] -->|MiniPay Wallet| Frontend[React Web App]
+    Frontend -->|Viem RPC| SmartContract[CeloSpaceMiner.sol]
+    SmartContract -->|On-Chain| USDm[USDm Stablecoin]
+    SmartContract -->|Data Storage| CeloChain[Celo Blockchain]
+    
+    subgraph "Core Logic"
+        SmartContract --> Mining[Mining Engine]
+        SmartContract --> Referral[Viral Referral Web]
+        SmartContract --> Upgrades[USDm Shop]
+    end
+```
 
 ---
 
