@@ -109,9 +109,7 @@ export const CELO_SPACE_MINER_ABI = [
     "stateMutability": "view",
     "type": "function"
   },
-    "stateMutability": "view",
-    "type": "function"
-  },
+
   {
     "inputs": [],
     "name": "owner",

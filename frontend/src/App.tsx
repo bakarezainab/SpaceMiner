@@ -431,6 +431,7 @@ function App() {
         {/* Ambient animations could go here */}
       </div>
     </div>
+    </>
   )
 }
 
