@@ -3,3 +3,4 @@
 - Update 2: fix: resolve RPC timeout edge cases
 - Update 3: style: update glassmorphism CSS variables
 - Update 4: docs: update API endpoints for USDm
+- Update 5: perf: pipeline nonce management
