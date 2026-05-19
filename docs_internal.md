@@ -2,3 +2,4 @@
 - Update 1: refactor: optimize relayer memory allocation
 - Update 2: fix: resolve RPC timeout edge cases
 - Update 3: style: update glassmorphism CSS variables
+- Update 4: docs: update API endpoints for USDm
