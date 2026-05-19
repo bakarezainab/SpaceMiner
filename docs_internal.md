@@ -4,3 +4,4 @@
 - Update 3: style: update glassmorphism CSS variables
 - Update 4: docs: update API endpoints for USDm
 - Update 5: perf: pipeline nonce management
+- Update 6: test: add unit tests for checkIn function
