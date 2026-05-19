@@ -1,1 +1,2 @@
 - Update 0: chore: update dependencies
+- Update 1: refactor: optimize relayer memory allocation
