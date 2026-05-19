@@ -1,2 +1,3 @@
 - Update 0: chore: update dependencies
 - Update 1: refactor: optimize relayer memory allocation
+- Update 2: fix: resolve RPC timeout edge cases
