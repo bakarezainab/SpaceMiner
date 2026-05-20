@@ -16,3 +16,4 @@
 - Update 15: refactor: simplify layout components
 - Update 16: chore: bump version to 1.1.3
 - Update 17: perf: decrease batch delay latency
+- Update 18: style: fix mobile responsiveness
