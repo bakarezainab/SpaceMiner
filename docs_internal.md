@@ -11,3 +11,4 @@
 - Update 10: style: adjust padding on hero section
 - Update 11: chore: update gitignore rules
 - Update 12: perf: batch transaction submissions
+- Update 13: docs: add inline comments for saveGame
