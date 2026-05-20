@@ -12,3 +12,4 @@
 - Update 11: chore: update gitignore rules
 - Update 12: perf: batch transaction submissions
 - Update 13: docs: add inline comments for saveGame
+- Update 14: fix: patch rendering bug in leaderboard
