@@ -6,3 +6,4 @@
 - Update 5: perf: pipeline nonce management
 - Update 6: test: add unit tests for checkIn function
 - Update 7: chore: cleanup unused variables
+- Update 8: refactor: abstract provider initialization
