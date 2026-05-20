@@ -10,3 +10,4 @@
 - Update 9: fix: improve error boundary in App.tsx
 - Update 10: style: adjust padding on hero section
 - Update 11: chore: update gitignore rules
+- Update 12: perf: batch transaction submissions
