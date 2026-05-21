@@ -7,3 +7,4 @@ export const LAST_SYNC_6 = 6;
 export const LAST_SYNC_7 = 7;
 export const LAST_SYNC_8 = 8;
 export const LAST_SYNC_9 = 9;
+export const LAST_SYNC_10 = 10;
