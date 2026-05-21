@@ -5,3 +5,4 @@ export const LAST_SYNC_4 = 4;
 export const LAST_SYNC_5 = 5;
 export const LAST_SYNC_6 = 6;
 export const LAST_SYNC_7 = 7;
+export const LAST_SYNC_8 = 8;
