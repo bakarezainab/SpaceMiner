@@ -3,3 +3,4 @@ export const LAST_SYNC_2 = 2;
 export const LAST_SYNC_3 = 3;
 export const LAST_SYNC_4 = 4;
 export const LAST_SYNC_5 = 5;
+export const LAST_SYNC_6 = 6;
