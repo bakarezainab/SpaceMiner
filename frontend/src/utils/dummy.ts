@@ -19,3 +19,4 @@ export const LAST_SYNC_18 = 18;
 export const LAST_SYNC_19 = 19;
 export const LAST_SYNC_20 = 20;
 export const LAST_SYNC_21 = 21;
+export const LAST_SYNC_22 = 22;
