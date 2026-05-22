@@ -39,3 +39,4 @@ export const LAST_SYNC_38 = 38;
 export const LAST_SYNC_39 = 39;
 export const LAST_SYNC_40 = 40;
 export const LAST_SYNC_23162 = 1;
+export const LAST_SYNC_26822 = 2;
