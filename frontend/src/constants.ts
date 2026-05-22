@@ -1,5 +1,39 @@
 export const CONTRACT_ADDRESS = "0x9F3fe1Eeeb2228b9385BD9ad8cB850821eF71720"; // Deployed on Celo Mainnet ✅
+export const ACHIEVEMENTS_ADDRESS = "0xf8d179ed5c25f1dadbbde02887af0a3242275dc7";
+export const SHOP_ADDRESS = "0x8271cc35078371762668ac9ff92700a371f9356a";
 export const USDM_ADDRESS = "0x765DE816845861e75A25fCA122bb6898B8B1282a";
+
+export const ACHIEVEMENTS_ABI = [
+  {
+    "inputs": [],
+    "name": "registerPlayer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "achievementId", "type": "uint256" }
+    ],
+    "name": "unlockAchievement",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+] as const;
+
+export const SHOP_ABI = [
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "itemId", "type": "uint256" },
+      { "internalType": "uint256", "name": "quantity", "type": "uint256" }
+    ],
+    "name": "buyItem",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+] as const;
 
 export const CELO_SPACE_MINER_ABI = [
   {

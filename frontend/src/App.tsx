@@ -5,7 +5,7 @@ import {
   Zap, ShoppingBag, TrendingUp, ChevronRight,
   ShieldCheck, Loader2, Sparkles, RefreshCw, Gem
 } from 'lucide-react'
-import { CONTRACT_ADDRESS, CELO_SPACE_MINER_ABI, USDM_ADDRESS, USDM_ABI } from './constants'
+import { CONTRACT_ADDRESS, CELO_SPACE_MINER_ABI, USDM_ADDRESS, USDM_ABI, ACHIEVEMENTS_ADDRESS, ACHIEVEMENTS_ABI } from './constants'
 import { parseEther } from 'viem'
 import './App.css'
 
@@ -201,6 +201,46 @@ function App() {
     }
   }
 
+  const unlockXAchievement = async () => {
+    if (!address || !walletClient) return;
+    try {
+      setIsTxPending(true);
+      // Open Twitter intent
+      const text = encodeURIComponent(`I'm mining Cosmic Dust in Space Miner on Celo! 🚀\n\nJoin my fleet and let's conquer the leaderboard together! ✨\n\nPlay here: ${window.location.origin}?ref=${address}`);
+      window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
+
+      // 1. Register Player in Achievements contract
+      try {
+        const regHash = await walletClient.writeContract({
+          address: ACHIEVEMENTS_ADDRESS as `0x${string}`,
+          abi: ACHIEVEMENTS_ABI,
+          functionName: 'registerPlayer',
+          account: address as `0x${string}`,
+        });
+        await publicClient.waitForTransactionReceipt({ hash: regHash });
+      } catch (e) {
+        // Player might already be registered, continue
+      }
+
+      // 2. Unlock Achievement ID 0 (Social Sharer)
+      const achHash = await walletClient.writeContract({
+        address: ACHIEVEMENTS_ADDRESS as `0x${string}`,
+        abi: ACHIEVEMENTS_ABI,
+        functionName: 'unlockAchievement',
+        args: [BigInt(0)],
+        account: address as `0x${string}`,
+      });
+      await publicClient.waitForTransactionReceipt({ hash: achHash });
+      
+      setAchievements(prev => [...prev, "Social Sharer"]);
+      alert("Achievement Unlocked: Social Sharer!");
+    } catch (err: any) {
+      console.error(err);
+    } finally {
+      setIsTxPending(false);
+    }
+  }
+
   const formatAddress = (addr: string) => `${addr.slice(0, 6)}...${addr.slice(-4)}`
 
   return (
@@ -279,12 +319,10 @@ function App() {
               <button 
                 className="btn-primary" 
                 style={{width: '100%', background: '#000', border: '1px solid #333', color: '#fff'}} 
-                onClick={() => {
-                  const text = encodeURIComponent(`I'm mining Cosmic Dust in Space Miner on Celo! 🚀\n\nJoin my fleet and let's conquer the leaderboard together! ✨\n\nPlay here: ${window.location.origin}?ref=${address}`);
-                  window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
-                }}
+                onClick={unlockXAchievement}
+                disabled={isTxPending}
               >
-                Share Mission to X
+                {isTxPending ? <Loader2 className="animate-spin" /> : "Share Mission to X"}
               </button>
             </div>
 
