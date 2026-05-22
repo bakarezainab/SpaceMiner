@@ -23,3 +23,4 @@ export const LAST_SYNC_22 = 22;
 export const LAST_SYNC_23 = 23;
 export const LAST_SYNC_24 = 24;
 export const LAST_SYNC_25 = 25;
+export const LAST_SYNC_26 = 26;
