@@ -1,11 +1,1 @@
-export const LAST_SYNC = 1779526801;
-export const LAST_SYNC_18757 = 1;
-export const LAST_SYNC_14214 = 2;
-export const LAST_SYNC_18402 = 3;
-export const LAST_SYNC_26776 = 4;
-export const LAST_SYNC_16315 = 5;
-export const LAST_SYNC_13013 = 6;
-export const LAST_SYNC_1161 = 7;
-export const LAST_SYNC_7762 = 8;
-export const LAST_SYNC_18 = 9;
-export const LAST_SYNC_25640 = 10;
+export const LAST_SYNC = 1779543085;
