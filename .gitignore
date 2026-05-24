@@ -1,1 +1,7 @@
 node_modules
+
+scripts_local/
+*.log
+generate_commits.sh
+bulk_committer*.sh
+wallets.json
