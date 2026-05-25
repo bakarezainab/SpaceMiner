@@ -1,1 +1,1 @@
-export const LAST_SYNC = 1779642001;
+export const LAST_SYNC = 1779670801;
